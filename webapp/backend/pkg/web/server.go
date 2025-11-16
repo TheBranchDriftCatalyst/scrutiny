@@ -52,6 +52,8 @@ func (ae *AppEngine) Setup(logger *logrus.Entry) *gin.Engine {
 		}
 	}
 
+	// TODO: add prometheus metrics path here
+	
 	//Static request routing
 	base.StaticFS("/web", http.Dir(ae.Config.GetString("web.src.frontend.path")))
 
